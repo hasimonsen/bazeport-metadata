@@ -1,51 +1,55 @@
 # BazePort Metadata Addons
 
-**BazePort Metadata Addons** er et samleprosjekt som inneholder to uavhengige Chrome-utvidelser for **BazePort Management Studio**.  
-Utvidelsene integrerer med [The Movie Database (TMDb)](https://www.themoviedb.org/) og gjør det mulig å hente og fylle ut metadata for både filmer og TV-serier raskt, presist og konsistent.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Chrome](https://img.shields.io/badge/Chrome-Extension-green)](https://chrome.google.com/webstore/)
 
-- 🎬 **Movies Addon** → [hasimonsen/bazeport-movies-metadata](https://github.com/hasimonsen/bazeport-movies-metadata)  
-- 📺 **TV Series Addon** → [hasimonsen/bazeport-tv-series-metadata](https://github.com/hasimonsen/bazeport-tv-series-metadata)  
+**BazePort Metadata Addons** is a parent project that hosts two independent Chrome extensions for **BazePort Management Studio**.  
+These addons integrate with [The Movie Database (TMDb)](https://www.themoviedb.org/) to automatically retrieve and populate metadata for both **movies** and **TV series**, ensuring speed, consistency, and accuracy in content registration.
 
-Begge prosjektene er utviklet separat for å reflektere forskjellene mellom film- og seriehåndtering i BazePort, men er samlet i dette hovedrepoet via **Git submodules** for enhetlig struktur og enkel distribusjon.
+- 🎬 **Movies Addon** → [bazeport-movies-metadata](https://github.com/hasimonsen/bazeport-movies-metadata)  
+- 📺 **TV Series Addon** → [bazeport-tv-series-metadata](https://github.com/hasimonsen/bazeport-tv-series-metadata)
 
----
-
-## 🌟 Nøkkelfunksjoner
-- Automatisk parsing av filnavn (inkludert sesong- og episodenummer for serier).  
-- Integrasjon mot **TMDb API** for uthenting av:
-  - Offisielle titler
-  - Produksjonsår
-  - Beskrivelser (overview)
-  - Plakater og bakgrunnsbilder  
-- Direkte utfylling i BazePort Management Studio sine skjemaer.  
-- Mulighet for både automatisert utfylling og manuell overstyring.  
-- Betydelig tidsbesparelse og redusert risiko for feil i metadataregistrering.
+Both extensions are maintained separately to reflect the different workflows for movies and TV series but are collected here as **Git submodules** for unified structure and streamlined distribution.
 
 ---
 
-## 📂 Repository-struktur
-```
+## ✨ Key Features
 
+- 🔎 **Automatic filename parsing** (season & episode detection for series).  
+- 🎬 **TMDb API integration** for:
+  - Official titles  
+  - Release year  
+  - Descriptions (overview)  
+  - Posters & backdrops  
+- ⚡ **Direct autofill** into BazePort Management Studio forms.  
+- 🛠 **Manual override support** where automation isn’t enough.  
+- 📉 **Reduced errors & significant time savings** in metadata entry.  
+
+---
+
+## 📂 Repository Structure
+
+```text
 bazeport-metadata/
-├── movies/   -> [https://github.com/hasimonsen/bazeport-movies-metadata](https://github.com/hasimonsen/bazeport-movies-metadata)
-└── tv/       -> [https://github.com/hasimonsen/bazeport-tv-series-metadata](https://github.com/hasimonsen/bazeport-tv-series-metadata)
-
+├── movies/   → Chrome extension for movies
+│   └── https://github.com/hasimonsen/bazeport-movies-metadata
+└── tv/       → Chrome extension for TV series
+    └── https://github.com/hasimonsen/bazeport-tv-series-metadata
 ````
 
-- `movies/` → Chrome-utvidelsen for filmer  
-- `tv/` → Chrome-utvidelsen for TV-serier  
-- Begge oppdateres uavhengig, men distribueres samlet her.
+Each extension is versioned independently but distributed together here.
 
 ---
 
-## 🚀 Kom i gang
+## 🚀 Getting Started
 
-### Klon hele prosjektet (inkludert submodules)
+Clone the project including its submodules:
+
 ```bash
 git clone --recurse-submodules https://github.com/hasimonsen/bazeport-metadata.git
-````
+```
 
-### Oppdater submodules til siste versjon
+Update submodules to the latest versions:
 
 ```bash
 git submodule update --remote --merge
@@ -53,60 +57,66 @@ git submodule update --remote --merge
 
 ---
 
-## 🔧 Installasjon i Chrome
+## 🔧 Installation in Chrome
 
-Hver utvidelse kan installeres separat i Chrome:
+Each extension can be installed separately:
 
-1. Last ned repoet (eller bare ønsket submodule).
-2. Åpne Chrome og naviger til `chrome://extensions/`.
-3. Aktiver **Developer Mode** (øverst til høyre).
-4. Klikk **Load unpacked** og velg mappen (`movies/` eller `tv/`).
-5. Utvidelsen er nå tilgjengelig i nettleseren.
-
----
-
-## 💡 Bruksscenario
-
-* Når en film eller serieepisode lastes opp i **BazePort Management Studio**, vises en verktøylinje fra addon.
-* Addon foreslår metadata basert på filnavn, eller lar brukeren søke manuelt.
-* Informasjon hentes fra TMDb og fylles inn automatisk:
-
-  * For filmer: tittel, årstall, beskrivelse, plakat.
-  * For serier: tittel, sesong, episode, beskrivelse, plakat.
-* Resultatet er en raskere, enklere og mer pålitelig arbeidsflyt.
+1. Download this repo (or only the desired submodule).
+2. Open Chrome and go to `chrome://extensions/`.
+3. Enable **Developer Mode**.
+4. Click **Load unpacked** and select either `movies/` or `tv/`.
+5. The extension will appear in Chrome.
 
 ---
 
-## 🎯 Hvorfor to addons?
+## 💡 Usage
 
-* **Filmer** krever kun enkel metadata (tittel, årstall, beskrivelse).
-* **TV-serier** krever mer kompleks logikk (sesong- og episodenummer, episodebeskrivelser).
+When uploading a movie or TV episode in **BazePort Management Studio**, the addon toolbar becomes available:
 
-Derfor er prosjektene bygget som to separate utvidelser, men de samles her for å gi et helhetlig rammeverk.
+* Parses filenames automatically for suggested metadata.
+* Fetches additional details from TMDb.
+* Autofills fields such as title, year, description, poster.
+
+**Examples:**
+
+* **Movies:** title, year, description, poster.
+* **TV Series:** show title, season, episode, description, poster.
+
+The result: **faster workflows, less manual typing, fewer errors.**
+
+---
+
+## 🎯 Why Two Extensions?
+
+* **Movies** → Simple metadata (title, year, description).
+* **TV Series** → Complex metadata (season/episode logic, episode-specific details).
+
+To keep the logic clean and maintainable, these are built as **separate extensions** but combined here for ease of use.
 
 ---
 
 ## 🗺 Roadmap
 
-* [ ] Flerspråklig metadata-støtte basert på TMDb-oversettelser.
-* [ ] Bedre fallback-mekanismer når TMDb ikke returnerer resultater.
-* [ ] Automatisk valg av best passende plakat/bakgrunnsbilde.
-* [ ] Forbedret logging, feilhåndtering og brukerfeedback.
+* 🌍 Multilingual metadata support via TMDb translations.
+* 🛡 Improved fallback when TMDb has no results.
+* 🖼 Smarter poster/backdrop selection.
+* 📊 Enhanced logging, error handling, and user feedback.
 
 ---
 
-## 🤝 Bidrag
+## 🤝 Contributing
 
-Bidrag ønskes!
+Contributions are welcome!
 
-* Opprett en *issue* eller *pull request* i dette repoet for generelle forbedringer.
-* For addon-spesifikke saker:
+* Open an **issue** or **pull request** in this repo for general improvements.
+* For addon-specific issues, please use the dedicated repositories:
 
   * 🎬 [Movies Repo](https://github.com/hasimonsen/bazeport-movies-metadata)
   * 📺 [TV Series Repo](https://github.com/hasimonsen/bazeport-tv-series-metadata)
 
 ---
 
-## 📜 Lisens
+## 📜 License
 
-Distribuert under [MIT License](LICENSE).
+Distributed under the [MIT License](LICENSE).
+© 2025 – BazePort Metadata Addons
