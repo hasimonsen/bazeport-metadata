@@ -1,0 +1,3 @@
+[submodule "tv"]
+	path = tv
+	url = git@github.com:hasimonsen/bazeport-tv-series-metadata.git
