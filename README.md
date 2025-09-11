@@ -116,6 +116,19 @@ Contributions are welcome!
 
 ---
 
+## ⚠️ Disclaimer
+
+This project is an **independent open-source initiative**.  
+It has **no official connection, affiliation, or endorsement** from:
+
+- **BazePort (Baze Technology AS)**  
+- **The Movie Database (TMDb)**  
+
+The software only provides tools to assist with metadata handling.  
+You are solely responsible for ensuring compliance with all relevant terms, conditions, and API usage policies.
+
+---
+
 ## 📜 License
 
 Distributed under the [MIT License](LICENSE).
