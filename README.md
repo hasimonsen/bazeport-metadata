@@ -6,11 +6,6 @@
 **BazePort Metadata Addons** is a parent project that hosts two independent Chrome extensions for **BazePort Management Studio**.  
 These addons integrate with [The Movie Database (TMDb)](https://www.themoviedb.org/) to automatically retrieve and populate metadata for both **movies** and **TV series**, ensuring speed, consistency, and accuracy in content registration.
 
-- 🎬 **Movies Addon** → [bazeport-movies-metadata](https://github.com/hasimonsen/bazeport-movies-metadata)  
-- 📺 **TV Series Addon** → [bazeport-tv-series-metadata](https://github.com/hasimonsen/bazeport-tv-series-metadata)
-
-Both extensions are maintained separately to reflect the different workflows for movies and TV series but are collected here as **Git submodules** for unified structure and streamlined distribution.
-
 ---
 
 ## ✨ Key Features
@@ -31,10 +26,7 @@ Both extensions are maintained separately to reflect the different workflows for
 
 ```text
 bazeport-metadata/
-├── movies/   → Chrome extension for movies
-│   └── https://github.com/hasimonsen/bazeport-movies-metadata
-└── tv/       → Chrome extension for TV series
-    └── https://github.com/hasimonsen/bazeport-tv-series-metadata
+
 ````
 
 Each extension is versioned independently but distributed together here.
@@ -86,12 +78,15 @@ The result: **faster workflows, less manual typing, fewer errors.**
 
 ---
 
-## 🎯 Why Two Extensions?
+## 🔖 Versioning & Releases
 
-* **Movies** → Simple metadata (title, year, description).
-* **TV Series** → Complex metadata (season/episode logic, episode-specific details).
+* Both addons follow **semantic versioning** (`MAJOR.MINOR.PATCH`).
 
-To keep the logic clean and maintainable, these are built as **separate extensions** but combined here for ease of use.
+* Releases are bundled under this parent repo for easier distribution and testing.
+
+* Chrome Web Store submissions use the version defined in each submodule’s `manifest.json`.
+
+* Parent repo versions (tags) may reflect combined milestone releases, e.g. **BazePort Metadata Addons 2.1.4*
 
 ---
 
@@ -104,27 +99,15 @@ To keep the logic clean and maintainable, these are built as **separate extensio
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!
-
-* Open an **issue** or **pull request** in this repo for general improvements.
-* For addon-specific issues, please use the dedicated repositories:
-
-  * 🎬 [Movies Repo](https://github.com/hasimonsen/bazeport-movies-metadata)
-  * 📺 [TV Series Repo](https://github.com/hasimonsen/bazeport-tv-series-metadata)
-
----
-
 ## ⚠️ Disclaimer
 
-This project is an **independent open-source initiative**.  
+This project is an **independent open-source initiative**.
 It has **no official connection, affiliation, or endorsement** from:
 
-- **BazePort (Baze Technology AS)**  
-- **The Movie Database (TMDb)**  
+* **BazePort (Baze Technology AS)**
+* **The Movie Database (TMDb)**
 
-The software only provides tools to assist with metadata handling.  
+The software only provides tools to assist with metadata handling.
 You are solely responsible for ensuring compliance with all relevant terms, conditions, and API usage policies.
 
 ---
