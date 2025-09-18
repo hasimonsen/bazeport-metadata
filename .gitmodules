@@ -1,6 +1,0 @@
-[submodule "movies"]
-	path = movies
-	url = https://github.com/hasimonsen/bazeport-movies-metadata.git
-[submodule "tv"]
-	path = tv
-	url = https://github.com/hasimonsen/bazeport-tv-series-metadata.git
