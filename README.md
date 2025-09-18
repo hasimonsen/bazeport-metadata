@@ -1,7 +1,6 @@
 # BazePort Metadata Addons
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Chrome](https://img.shields.io/badge/Chrome-Extension-green)](https://chrome.google.com/webstore/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Chrome](https://img.shields.io/badge/Chrome-Extension-green)]([https://chrome.google.com/webstore/](https://chromewebstore.google.com/detail/bazeport-metadata-via-tmd/bnppmokjongpmmjlacooabfjcgdebfdc?authuser=0&hl=no))
 
 **BazePort Metadata Addons** is a parent project that hosts two independent Chrome extensions for **BazePort Management Studio**.  
 These addons integrate with [The Movie Database (TMDb)](https://www.themoviedb.org/) to automatically retrieve and populate metadata for both **movies** and **TV series**, ensuring speed, consistency, and accuracy in content registration.
